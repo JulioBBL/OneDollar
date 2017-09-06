@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="OneDollar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mRA-9l-vhT"/>
+                        <viewControllerLayoutGuide type="bottom" id="s8R-nR-Ssr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JLk-eG-4Ta">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayb-pV-Zbz" customClass="StrokeView" customModule="OneDollar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="492"/>
+                                <color key="backgroundColor" red="1" green="0.52663369640000002" blue="0.51901753470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObE-i4-dFk">
+                                <rect key="frame" x="0.0" y="539" width="375" height="128"/>
+                                <color key="backgroundColor" red="0.45132255400309296" green="0.44861661999574698" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="R8j-XB-Fnc"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEMPLATES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ipe-F0-R4s">
+                                <rect key="frame" x="52" y="510" width="271" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="krc-il-9cH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ObE-i4-dFk" secondAttribute="trailing" id="0Fc-fa-bCC"/>
+                            <constraint firstItem="s8R-nR-Ssr" firstAttribute="top" secondItem="ObE-i4-dFk" secondAttribute="bottom" id="3RO-vI-uvs"/>
+                            <constraint firstItem="Ipe-F0-R4s" firstAttribute="top" secondItem="ayb-pV-Zbz" secondAttribute="bottom" constant="18" id="61L-mK-H2G"/>
+                            <constraint firstAttribute="trailing" secondItem="ayb-pV-Zbz" secondAttribute="trailing" id="MYx-96-aEc"/>
+                            <constraint firstItem="Ipe-F0-R4s" firstAttribute="leading" secondItem="JLk-eG-4Ta" secondAttribute="leadingMargin" constant="36" id="Xh7-En-0Fx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ipe-F0-R4s" secondAttribute="trailing" constant="36" id="bda-1J-xcH"/>
+                            <constraint firstItem="ObE-i4-dFk" firstAttribute="top" secondItem="Ipe-F0-R4s" secondAttribute="bottom" constant="8" id="gTF-G8-KCJ"/>
+                            <constraint firstItem="ObE-i4-dFk" firstAttribute="leading" secondItem="JLk-eG-4Ta" secondAttribute="leading" id="qZB-cr-ZTs"/>
+                            <constraint firstItem="ayb-pV-Zbz" firstAttribute="leading" secondItem="JLk-eG-4Ta" secondAttribute="leading" id="uzl-dI-7Hg"/>
+                            <constraint firstItem="ayb-pV-Zbz" firstAttribute="top" secondItem="JLk-eG-4Ta" secondAttribute="top" id="vH5-6G-dMm"/>
+                            <constraint firstItem="Ipe-F0-R4s" firstAttribute="top" secondItem="ayb-pV-Zbz" secondAttribute="bottom" constant="18" id="yd0-jE-ATp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drawView" destination="ayb-pV-Zbz" id="35z-BM-TM2"/>
+                        <outlet property="labelTemplates" destination="Ipe-F0-R4s" id="gWE-Gi-ZhH"/>
+                        <outlet property="templatesScollView" destination="ObE-i4-dFk" id="BN3-CG-KCT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
