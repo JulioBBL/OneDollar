@@ -319,7 +319,7 @@ extension Double {
      - returns: radian
      */
     public func toRadians() -> Double {
-        let res = self * M_PI / 180.0
+        let res = self * .pi / 180.0
         return res
     }
     

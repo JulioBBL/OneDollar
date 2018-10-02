@@ -111,7 +111,7 @@ class GameViewController: UIViewController {
                 // For each template get its preview and show them inside the bottom screen scroll view
                 let templateView = UIImageView(frame: CGRect(x:x,y:0,width:size,height:size))
                 templateView.image = UIImage(named: templateImage)
-                templateView.contentMode = UIViewContentMode.scaleAspectFit
+                templateView.contentMode = UIView.ContentMode.scaleAspectFit
                 templateView.layer.borderColor = UIColor.lightGray.cgColor
                 templateView.layer.borderWidth = 2
                 templatesScollView.addSubview(templateView)
